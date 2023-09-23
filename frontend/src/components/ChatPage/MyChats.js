@@ -7,7 +7,7 @@ import ChatLoading from "./ChatLoading";
 import { getSenderName } from "../../config/logics";
 import CreateGroupModal from "./CreateGroupModal";
 
-const URI = "http://localhost:3500";
+const URI = "https://chit-chat-1-0-git-main-saimmanzoor49.vercel.app/";
 
 export default function MyChats() {
   const [isLoading, setIsLoading] = useState(false);

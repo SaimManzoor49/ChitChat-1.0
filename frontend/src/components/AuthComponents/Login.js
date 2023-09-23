@@ -27,7 +27,7 @@ export default function Login() {
 
   const toast = useToast();
   const navigator = useNavigate();
-  const URI = "http://localhost:3500";
+  const URI = "https://chit-chat-1-0-git-main-saimmanzoor49.vercel.app/";
 
   const handleChange = (e) => {
     const { name, value } = e.target;

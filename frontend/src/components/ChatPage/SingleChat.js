@@ -19,9 +19,9 @@ import ScrollableChat from "./ScrollableChat";
 import { io } from "socket.io-client";
 import typingAnimation from "../../assets/loaders/animation_lksfu20r_small.gif";
 
-const URI = "http://localhost:3500";
+const URI = "https://chit-chat-1-0-git-main-saimmanzoor49.vercel.app/";
 
-const endPoint = "http://localhost:3500";
+const endPoint = "https://chit-chat-1-0-git-main-saimmanzoor49.vercel.app/";
 var socket, selectedChatCompare;
 export default function SingleChat({ fetchChatsAgain, setFetchChatsAgain }) {
   const [messages, setMessages] = useState([]);

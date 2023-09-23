@@ -22,7 +22,7 @@ import UserBadge from "./UserBadge";
 import axios from "axios";
 import UserListItem from "./UserListItem";
 
-const URI = "http://localhost:3500";
+const URI = "https://chit-chat-1-0-git-main-saimmanzoor49.vercel.app/";
 
 export default function UpdateGroupChatModal({ fetchMessages }) {
   const [gruopName, setGroupName] = useState("");
