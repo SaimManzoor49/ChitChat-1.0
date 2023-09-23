@@ -26,7 +26,7 @@ export default function Signup() {
   const [pic, setPic] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  const URI = "https://chit-chat-1-0-git-main-saimmanzoor49.vercel.app/";
+  const URI = "https://chit-chat-1-0-git-main-saimmanzoor49.vercel.app";
 
   const navigator = useNavigate();
   const toast = useToast();
