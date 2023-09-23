@@ -5,6 +5,19 @@ const connectDB = require("./config/connectDB");
 const path = require('path')
 require("dotenv").config();
 
+const allowedOrigins = ['https://chit-chat-1-0-frontend.vercel.app'];
+const corsOptions = {
+  origin: (origin, callback) => {
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      // Allow requests from the specified origin(s)
+      callback(null, true);
+    } else {
+      // Deny requests from other origins
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+};
+
 const app = express();
 const PORT = process.env.PORT || 3500;
 
@@ -12,7 +25,7 @@ const PORT = process.env.PORT || 3500;
 
 
 app.use(express.json())
-app.use(cors())
+app.use(cors(corsOptions)); 
 connectDB();
 
 
