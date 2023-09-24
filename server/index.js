@@ -25,11 +25,16 @@ const PORT = process.env.PORT || 3500;
 
 
 app.use(express.json())
-app.use(cors(corsOptions)); 
+// app.use(cors(corsOptions)); 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'https://chit-chat-1-0-frontend.vercel.app');
   next();
 });
+app.use(cors({
+  origin: 'https://chit-chat-1-0-frontend.vercel.app',
+  methods: ['GET', 'POST'],
+  credentials: true // This allows cookies to be sent cross-origin if needed
+}));
 connectDB();
 
 
@@ -64,7 +69,7 @@ const server = app.listen(PORT, () => {
 const io = require('socket.io')(server,{
   pingTimeout: 60000,
   cors:{
-    origin:"https://chit-chat-1-0-frontend.vercel.app",
+    origin: 'https://chit-chat-1-0-frontend.vercel.app',
 
   }
 })
