@@ -54,7 +54,7 @@ app.use('/api/message',require('./routes/messageRoutes'));
 // }else{
   app.get("/", (req, res) => {
     res.send("hello world");
-  });s
+  });
 // }
 // Deployment-----------------
 const server = app.listen(PORT, () => {
