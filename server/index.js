@@ -26,6 +26,10 @@ const PORT = process.env.PORT || 3500;
 
 app.use(express.json())
 app.use(cors(corsOptions)); 
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://chit-chat-1-0-frontend.vercel.app');
+  next();
+});
 connectDB();
 
 
@@ -50,7 +54,7 @@ app.use('/api/message',require('./routes/messageRoutes'));
 // }else{
   app.get("/", (req, res) => {
     res.send("hello world");
-  });
+  });s
 // }
 // Deployment-----------------
 const server = app.listen(PORT, () => {
