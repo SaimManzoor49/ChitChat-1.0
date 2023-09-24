@@ -41,7 +41,7 @@ export default function Header() {
   const [isLoading, setIsLoading] = useState(false);
   const [loadingChat, setLoadingChat] = useState("");
 
-  const URI = "https://chit-chat-1-0-git-main-saimmanzoor49.vercel.app";
+  const URI = "https://chit-chat-1-0.vercel.app";
 
   const navigator = useNavigate();
   const { setUser } = useChat();
